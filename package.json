@@ -2,6 +2,7 @@
   "name": "parcel-assembly",
   "version": "1.0.0",
   "description": "parcel training",
+  "homepage": "https://seacat271.github.io/parcel-assembly/",
   "scripts": {
     "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"
