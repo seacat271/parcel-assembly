@@ -1,0 +1,17 @@
+{
+  "name": "parcel-assembly",
+  "version": "1.0.0",
+  "description": "parcel training",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "parcel-assembly"
+  },
+  "author": "Artemenko Kirill",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.1"
+  }
+}
