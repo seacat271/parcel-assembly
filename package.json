@@ -5,7 +5,7 @@
   "homepage": "https://seacat271.github.io/parcel-assembly/",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build ./src/index.html --public-url /parcel-assembly"
   },
   "repository": {
     "type": "git",
