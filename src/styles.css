@@ -1,4 +1,26 @@
-h1 {
-  color: blue;
-  font-size: 40px;
+body {
+  margin: 50px 100px;
+}
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20;
+}
+
+textarea {
+  width: 170px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+button {
+  display: block;
+  width: 170px;
+  height: 25px;
+  box-sizing: border-box;
+}
+
+input {
+  width: 170px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
 }
