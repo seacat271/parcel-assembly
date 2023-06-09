@@ -28,8 +28,10 @@ function onTextareaInput(event) {
 function saveFeedback() {
   const savedData = JSON.parse(localStorage.getItem(KEY));
 
-  if (savedData) {
+  if (savedData?.message) {
     refs.textarea.value = savedData.message;
+  }
+  if (savedData?.input) {
     refs.input.value = savedData.name;
   }
 }
