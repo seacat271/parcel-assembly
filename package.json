@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.9.1"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
   }
 }

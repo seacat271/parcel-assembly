@@ -1,3 +1,5 @@
+const KEY = "message";
+
 const refs = {
   form: document.querySelector(".form"),
   textarea: document.querySelector(".form textarea"),
@@ -10,15 +12,15 @@ saveFeedback();
 function onFormSubmit(event) {
   event.preventDefault();
   event.currentTarget.reset();
-  localStorage.removeItem("message");
+  localStorage.removeItem(KEY);
 }
 function onTextareaInput(event) {
   const message = event.currentTarget.value;
-  localStorage.setItem("message", message);
+  localStorage.setItem(KEY, message);
 }
 
 function saveFeedback() {
-  const savedMessage = localStorage.getItem("message");
+  const savedMessage = localStorage.getItem(KEY);
   if (savedMessage) {
     refs.textarea.value = savedMessage;
   }
