@@ -2,13 +2,16 @@ import throttle from "lodash.throttle";
 
 const KEY = "message";
 
+const data = {};
+
 const refs = {
   form: document.querySelector(".form"),
   textarea: document.querySelector(".form textarea"),
+  input: document.querySelector("input"),
 };
 
 refs.form.addEventListener("submit", onFormSubmit);
-refs.textarea.addEventListener("input", throttle(onTextareaInput, 500));
+refs.form.addEventListener("input", onTextareaInput);
 saveFeedback();
 
 function onFormSubmit(event) {
@@ -17,13 +20,16 @@ function onFormSubmit(event) {
   localStorage.removeItem(KEY);
 }
 function onTextareaInput(event) {
-  const message = event.target.value;
-  localStorage.setItem(KEY, message);
+  data[event.target.name] = event.target.value;
+
+  localStorage.setItem(KEY, JSON.stringify(data));
 }
 
 function saveFeedback() {
-  const savedMessage = localStorage.getItem(KEY);
-  if (savedMessage) {
-    refs.textarea.value = savedMessage;
+  const savedData = JSON.parse(localStorage.getItem(KEY));
+
+  if (savedData) {
+    refs.textarea.value = savedData.message;
+    refs.input.value = savedData.name;
   }
 }
