@@ -1,2 +1,0 @@
-const e="message",t={form:document.querySelector(".form"),textarea:document.querySelector(".form textarea")};t.form.addEventListener("submit",function(t){t.preventDefault(),t.currentTarget.reset(),localStorage.removeItem(e)}),t.textarea.addEventListener("input",function(t){let r=t.currentTarget.value;localStorage.setItem(e,r)}),function(){let r=localStorage.getItem(e);r&&(t.textarea.value=r)}();
-//# sourceMappingURL=index.87117015.js.map
