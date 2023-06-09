@@ -1,3 +1,5 @@
+import throttle from "lodash.throttle";
+
 const KEY = "message";
 
 const refs = {
@@ -6,7 +8,7 @@ const refs = {
 };
 
 refs.form.addEventListener("submit", onFormSubmit);
-refs.textarea.addEventListener("input", onTextareaInput);
+refs.textarea.addEventListener("input", throttle(onTextareaInput, 500));
 saveFeedback();
 
 function onFormSubmit(event) {
@@ -15,7 +17,7 @@ function onFormSubmit(event) {
   localStorage.removeItem(KEY);
 }
 function onTextareaInput(event) {
-  const message = event.currentTarget.value;
+  const message = event.target.value;
   localStorage.setItem(KEY, message);
 }
 
